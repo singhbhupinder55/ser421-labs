@@ -1,0 +1,107 @@
+
+
+	Bhupinder Singh
+	ASURITE ID: bsingh55
+	Lab 6 - Activity 1
+
+NOTE: As instructed by the course staff, the actual GitHub token is not included in this submission.  
+Where required, I have used `<token_here>` in place of the real token.
+
+
+=== STEP 1: Retrieve Java .gitignore Template ===
+
+Verb: GET
+
+URL: https://api.github.com/gitignore/templates/Java
+
+HEADERS:
+Authorization: token <token_here>
+Accept: application/vnd.github.v3+json
+
+
+
+=== STEP 2: Retrieve All Branches ===
+
+Verb: GET
+
+URL: https://api.github.com/repos/kgary/ser421public/branches
+
+HEADERS:
+Authorization: token <token_here>  
+
+
+=== STEP 3: Retrieve Comments on Issue #34 ===
+
+Verb: GET
+
+URL: https://api.github.com/repos/kgary/ser421public/issues/34/comments
+
+HEADERS:
+Authorization: token <token_here>  
+Accept: application/vnd.github.v3+json
+
+
+
+=== STEP 4: Add a Comment to Issue #34 ===
+
+Verb: POST
+
+URL: https://api.github.com/repos/kgary/ser421public/issues/34/comments
+
+HEADERS:
+Authorization: token <token_here>  
+Accept: application/vnd.github.v3+json  
+Content-Type: application/json
+
+BODY:
+{
+  "body": "This is Bhupinder Singh. My ASURITE ID is bsingh55."
+}
+
+RESPONSE:
+{
+  "url": "https://api.github.com/repos/kgary/ser421public/issues/comments/3030778434",
+  "html_url": "https://github.com/kgary/ser421public/issues/34#issuecomment-3030778434",
+  "issue_url": "https://api.github.com/repos/kgary/ser421public/issues/34",
+  "id": 3030778434,
+  "node_id": "IC_kwDOA_GkQs60pgJC",
+  "user": {
+    "login": "singhbhupinder55",
+    "id": 185298609,
+    "node_id": "U_kgDOCwtusQ",
+    "avatar_url": "https://avatars.githubusercontent.com/u/185298609?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/singhbhupinder55",
+    "html_url": "https://github.com/singhbhupinder55",
+    "followers_url": "https://api.github.com/users/singhbhupinder55/followers",
+    "following_url": "https://api.github.com/users/singhbhupinder55/following{/other_user}",
+    "gists_url": "https://api.github.com/users/singhbhupinder55/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/singhbhupinder55/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/singhbhupinder55/subscriptions",
+    "organizations_url": "https://api.github.com/users/singhbhupinder55/orgs",
+    "repos_url": "https://api.github.com/users/singhbhupinder55/repos",
+    "events_url": "https://api.github.com/users/singhbhupinder55/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/singhbhupinder55/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "created_at": "2025-07-03T05:16:12Z",
+  "updated_at": "2025-07-03T05:16:12Z",
+  "author_association": "NONE",
+  "body": "This is Bhupinder Singh. My ASURITE ID is bsingh55.",
+  "reactions": {
+    "url": "https://api.github.com/repos/kgary/ser421public/issues/comments/3030778434/reactions",
+    "total_count": 0,
+    "+1": 0,
+    "-1": 0,
+    "laugh": 0,
+    "hooray": 0,
+    "confused": 0,
+    "heart": 0,
+    "rocket": 0,
+    "eyes": 0
+  },
+  "performed_via_github_app": null
+}
+

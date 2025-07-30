@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Activity 2 - Eliza Chat</title>
+</head>
+<body>
+    <!-- Greeting Section -->
+    <h1>Welcome to Eliza Chatbot</h1>
+
+    <div id="greeting-section">
+        <p>Please enter your name to begin:</p>
+        <input type="text" id="userName" placeholder="Your Name" />
+        <button id="startChatBtn">Start Chat</button>
+    </div>
+
+    <!-- Chat Section -->
+    <div id="chat-section" style="display: none;">
+        <h3 id="userNameDisplay"></h3>
+        <p id="elizaPrompt"></p>
+        <div id="conversation"></div>
+        <input type="text" id="userInput" placeholder="Type your message here" />
+        <button id="sendBtn">Send</button>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="Activity2.js"></script>
+</body>
+</html>

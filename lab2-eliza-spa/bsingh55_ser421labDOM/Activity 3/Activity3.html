@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliza Chatbot</title>
+</head>
+<body>
+<h1>Welcome to Eliza Chatbot</h1>
+
+<!-- Section to greet the user -->
+<div id="greeting-section">
+    <p>Please enter your name to begin:</p>
+    <input type="text" id="userName" placeholder="Your Name">
+    <button id="startChatBtn">Start Chat</button>
+</div>
+
+<!-- Section where the chat will happen -->
+<div id="chat-section" style="display: none;">
+    <div id="conversation"></div> <!-- This will hold the conversation history -->
+    <p id="elizaPrompt"></p> <!-- This will display Eliza's next question -->
+    <input type="text" id="userInput" placeholder="Type your message here"> <!-- User input -->
+    <button id="sendBtn">Send</button> <!-- Button to submit the message -->
+</div>
+
+<!-- Link the JavaScript file -->
+<script src="Activity3.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Survey</title>
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+<div id="app">
+    <h1>Answer me these questions 3:</h1>
+
+    <div class="question-container">
+        <label for="question1">{{ question1 }}</label>
+    </div>
+    <div class="answer-container">
+        <input type="text" id="question1" v-model="answers[0]" class="answer-input">
+    </div>
+
+    <div class="question-container">
+        <label for="question2">{{ question2 }}</label>
+    </div>
+    <div class="answer-container">
+        <input type="text" id="question2" v-model="answers[1]" class="answer-input">
+    </div>
+
+    <div class="question-container" v-if="question3Option === 1">
+        <label for="question3">{{ question3Option1 }}</label>
+    </div>
+    <div class="question-container" v-else>
+        <label for="question3">{{ question3Option2 }}</label>
+    </div>
+    <div class="answer-container">
+        <input type="text" id="question3" v-model="answers[2]" class="answer-input">
+    </div>
+
+    <div class="button-container">
+        <button @click="resetForm">Go again</button>
+        <button @click="toggleQuestion3">OR</button>
+    </div>
+
+    <p class="response" v-if="showKnightResponse">{{ knightResponse }}</p>
+    <p class="response" v-else-if="showBridgekeeperResponse">{{ bridgekeeperResponse }}</p>
+</div>
+
+<script>
+    const app = Vue.createApp({
+        data() {
+            return {
+                question1: '1. What is your name?',
+                question2: '2. What is your quest?',
+                question3Option1: '3. What is your favorite color?',
+                question3Option2: '3. What is the airspeed velocity of an unladen swallow?',
+                question3Option: 1,
+                answers: ['', '', ''],
+            };
+        },
+        computed: {
+            showKnightResponse() {
+                return this.answers.some(answer => answer.toLowerCase() === 'idk');
+            },
+            showBridgekeeperResponse() {
+                return this.answers.every(answer => answer.toLowerCase() !== 'idk') && this.answers.every(answer => answer.length > 0);
+            },
+            bridgekeeperResponse() {
+                return 'Bridgekeeper: Alright, off you go then';
+            },
+            knightResponse() {
+                return 'Knight: AAAAAAAAHHHHHHHHHHH!!!';
+            },
+        },
+        methods: {
+            resetForm() {
+                this.answers = ['', '', ''];
+                this.question3Option = 1;
+            },
+            toggleQuestion3() {
+                this.question3Option = this.question3Option === 1 ? 2 : 1;
+            },
+        },
+    });
+
+    app.mount('#app');
+</script>
+</body>
+</html>
+

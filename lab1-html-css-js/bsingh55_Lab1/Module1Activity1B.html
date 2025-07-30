@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- 
+  Module1Activity1B.html
+  Author: Bhupinder Singh (ASURITE: bsingh55)
+  Description: This HTML file demonstrates pattern-based input validation 
+               for a banking-style routing number field. The pattern includes:
+               - 9-digit routing number
+               - 12-digit account number
+               - 4-digit check number
+               All separated by single spaces.
+  No JavaScript is used. Validation is done using the HTML5 pattern attribute.
+-->
+
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Routing Number Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        input[type="text"] {
+            width: 320px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Routing Number Form</h3>
+
+    <form method="post" action="https://postman-echo.com/post">
+
+        <p>
+            <label for="bsingh55_RTN">Routing Number:</label><br>
+            <input type="text"
+                   id="bsingh55_RTN"
+                   name="bsingh55_RTN"
+                   pattern="\d{9} \d{12} \d{4}"
+                   title="Format: 9-digit routing number, space, 12-digit account number, space, 4-digit check number. Example: 123456789 000123456789 0001"
+                   required>
+        </p>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+
+</body>
+
+</html>
