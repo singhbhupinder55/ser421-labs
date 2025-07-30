@@ -15,6 +15,16 @@ This repository contains all 7 labs completed as part of the SER 421 Web Applica
 | 7 | `lab7-security-lab` | HTTPS sniffing with Wireshark + XSS vulnerability scan using OWASP ZAP |
 
 ---
-
 Each lab is located in its own subdirectory with source files, documentation, and sample data/tests where applicable.
+
+---
+
+📄 **Each lab folder includes its own `README.md`** file with a detailed explanation of:
+- The lab objective
+- Technologies used
+- How to run/test it
+- Key files and structure
+
+Explore individual lab folders for full documentation.
+
 
